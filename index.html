@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashboard </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="assets/layouts/layout2/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/layouts/layout2/css/themes/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="assets/layouts/layout2/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+        <!-- BEGIN CUSTOM ADDED CSS -->
+        <link href="assets/layouts/layout2/css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <!-- END CUSTOM ADDED CSS -->
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
+
+    <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner mb-bg">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo malika-logo">
+                    <a href="index.html">
+                        <img src="assets/layouts/layout2/img/malika-logo.png" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE ACTIONS -->
+                <!-- DOC: Remove "hide" class to enable the page header actions -->
+                <div class="page-actions">
+                    <div class="btn-group">
+                        
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-docs"></i> New Post </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-tag"></i> New Comment </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <!-- END PAGE ACTIONS -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." name="query">
+                            <span class="input-group-btn">
+                                <a href="javascript:;" class="btn submit">
+                                    <i class="icon-magnifier"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="badge badge-default badge-red"> 7 </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>
+                                            <span class="bold">12 pending</span> notifications</h3>
+                                        <a href="page_user_profile_1.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-success">
+                                                            <i class="fa fa-plus"></i>
+                                                        </span> New user registered. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Server #12 overloaded. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">10 mins</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Server #2 not responding. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">14 hrs</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> Application error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">2 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Database overloaded 68%. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">3 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> A user IP blocked. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">4 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-warning">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span> Storage Server #4 not responding dfdfdfd. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">5 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-info">
+                                                            <i class="fa fa-bullhorn"></i>
+                                                        </span> System Error. </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">9 days</span>
+                                                    <span class="details">
+                                                        <span class="label label-sm label-icon label-danger">
+                                                            <i class="fa fa-bolt"></i>
+                                                        </span> Storage server failed. </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <img alt="" class="img-circle" src="assets/layouts/layout2/img/avatar3_small.jpg" />
+                                    <span class="username username-hide-on-mobile"> Suren </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="page_user_profile_1.html">
+                                            <i class="icon-user"></i> My Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="app_calendar.html">
+                                            <i class="icon-calendar"></i> My Calendar </a>
+                                    </li>
+                                    <li>
+                                        <a href="page_user_login_1.html">
+                                            <i class="icon-key"></i> Log Out </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                           
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- END SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                    <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item start active open">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-home dash-icon"></i>
+                                <span class="title">Dashboard</span>
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                            
+                        </li>
+                        
+                        
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content page-content-bg">
+                    <!-- BEGIN PAGE HEADER-->
+                   
+                    <h3 class="page-title"> Sajha Yatayat
+                        <small>dashboard & statistics</small>
+                    </h3>
+                    
+                    <!-- END PAGE HEADER-->
+
+                    <div class="row">
+                        <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 exp-title">
+                                        DAILY
+                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-blue-sharp">
+                                            <small class="font-blue-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="8000">0</span>
+                                        </h3>
+                                        <small>TOTAL COLLECTION</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-red-haze">
+                                            <small class="font-red-haze">Rs</small>
+                                            <span data-counter="counterup" data-value="3000">0</span>
+                                        </h3>
+                                        <small>EXPENSES</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-green-sharp">
+                                            <small class="font-green-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="5000">0</span>
+                                        </h3>
+                                        <small>NET PROFIT</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 exp-title">
+                                        WEEKLY
+                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-blue-sharp">
+                                            <small class="font-blue-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="56000">0</span>
+                                        </h3>
+                                        <small>TOTAL COLLECTION</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-red-haze">
+                                            <small class="font-red-haze">Rs</small>
+                                            <span data-counter="counterup" data-value="21000">0</span>
+                                        </h3>
+                                        <small>EXPENSES</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-green-sharp">
+                                            <small class="font-green-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="35000">0</span>
+                                        </h3>
+                                        <small>NET PROFIT</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 exp-title">
+                                        MONTHLY
+                                </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-blue-sharp">
+                                            <small class="font-blue-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="240000">0</span>
+                                        </h3>
+                                        <small>TOTAL COLLECTION</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-red-haze">
+                                            <small class="font-red-haze">Rs</small>
+                                            <span data-counter="counterup" data-value="84000">0</span>
+                                        </h3>
+                                        <small>EXPENSES</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="dashboard-stat2 dash-stat ">
+                                <div class="display">
+                                    <div class="number">
+                                        <h3 class="font-green-sharp">
+                                            <small class="font-green-sharp">Rs</small>
+                                            <span data-counter="counterup" data-value="140000">0</span>
+                                        </h3>
+                                        <small>NET PROFIT</small>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="icon-pie-chart"></i>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                   
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 ">
+                            <div class="portlet light ">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="icon-cursor font-dark hide"></i>
+                                        <span class="caption-subject font-dark bold uppercase">Expenses Stats</span>
+                                    </div>
+                                    <div class="actions">
+                                        <a href="javascript:;" class="btn btn-sm btn-circle red easy-pie-chart-reload">
+                                            <i class="fa fa-repeat"></i> Reload </a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="easy-pie-chart">
+                                                <div class="number transactions" data-percent="55">
+                                                    <span>+55</span>% </div>
+                                                <a class="title" href="javascript:;"> Feul
+                                                    <i class="icon-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="margin-bottom-10 visible-sm"> </div>
+                                        <div class="col-md-4">
+                                            <div class="easy-pie-chart">
+                                                <div class="number visits" data-percent="85">
+                                                    <span>+85</span>% </div>
+                                                <a class="title" href="javascript:;"> Maintainance
+                                                    <i class="icon-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="margin-bottom-10 visible-sm"> </div>
+                                        <div class="col-md-4">
+                                            <div class="easy-pie-chart">
+                                                <div class="number bounce" data-percent="46">
+                                                    <span>-46</span>% </div>
+                                                <a class="title" href="javascript:;"> Salary
+                                                    <i class="icon-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="portlet light ">
+                                <div class="portlet-title">
+                                    <div class="caption caption-md">
+                                        <i class="icon-bar-chart font-dark hide"></i>
+                                        <span class="caption-subject font-dark bold uppercase">Member Activity</span>
+                                        <span class="caption-helper">weekly stats...</span>
+                                    </div>
+                                    <div class="actions">
+                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                            <label class="btn btn-transparent green btn-outline btn-circle btn-sm active">
+                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                            <label class="btn btn-transparent green btn-outline btn-circle btn-sm">
+                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                            <label class="btn btn-transparent green btn-outline btn-circle btn-sm">
+                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                        <div class="table-scrollable table-scrollable-borderless">
+                                            <table class="table table-hover table-light table-responsive-md">
+                                                <thead>
+                                                    <tr class="uppercase">
+                                                        <th colspan="2"> Driver </th>
+                                                        <th> ID </th>
+                                                        <th> Bus no </th>
+                                                        <th> Status </th>
+                                                        <th> Action </th>
+                                                    </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar4.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Ram Prasad dhakal</a>
+                                                    </td>
+                                                    <td> SH-034 </td>
+                                                    <td> 45 </td>
+                                                    <td> 124 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">80%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar5.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Bikram Shrestha</a>
+                                                    </td>
+                                                    <td> BH-087 </td>
+                                                    <td> 12 </td>
+                                                    <td> 24 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">67%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar6.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Sangita Paudel</a>
+                                                    </td>
+                                                    <td> CD-876 </td>
+                                                    <td> 450 </td>
+                                                    <td> 46 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">98%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar7.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Shyam Shrestha</a>
+                                                    </td>
+                                                    <td> ER-543 </td>
+                                                    <td> 50 </td>
+                                                    <td> 89 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">58%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar7.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Shyam Shrestha</a>
+                                                    </td>
+                                                    <td> ER-543 </td>
+                                                    <td> 50 </td>
+                                                    <td> 89 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">58%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar7.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Shyam Shrestha</a>
+                                                    </td>
+                                                    <td> ER-543 </td>
+                                                    <td> 50 </td>
+                                                    <td> 89 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">58%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar7.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Shyam Shrestha</a>
+                                                    </td>
+                                                    <td> ER-543 </td>
+                                                    <td> 50 </td>
+                                                    <td> 89 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">58%</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fit">
+                                                        <img class="user-pic rounded" src="assets/pages/media/users/avatar7.jpg"> </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="primary-link">Shyam Shrestha</a>
+                                                    </td>
+                                                    <td> ER-543 </td>
+                                                    <td> 50 </td>
+                                                    <td> 89 </td>
+                                                    <td>
+                                                        <span class="bold theme-font">58%</span>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="portlet light ">
+                                    <div class="portlet-title">
+                                        <div class="caption caption-md">
+                                            <i class="icon-bar-chart font-dark hide"></i>
+                                            <span class="caption-subject font-dark bold uppercase">Customer Support</span>
+                                            <span class="caption-helper">45 pending</span>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="portlet-input input-inline input-small ">
+                                                <div class="input-icon right">
+                                                    <i class="icon-magnifier"></i>
+                                                    <input type="text" class="form-control form-control-solid input-circle" placeholder="search..."> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body">
+                                        <div class="scroller" style="height: 338px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                            <div class="general-item-list">
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar4.jpg">
+                                                            <a href="" class="item-name primary-link">Ram Prasad</a>
+                                                            <span class="item-label">3 hrs ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-success"></span> Open</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar3.jpg">
+                                                            <a href="" class="item-name primary-link">Hari Dahal</a>
+                                                            <span class="item-label">5 hrs ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-warning"></span> Pending</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat tincidunt ut laoreet. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar6.jpg">
+                                                            <a href="" class="item-name primary-link">Geeta Basnet</a>
+                                                            <span class="item-label">8 hrs ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-primary"></span> Closed</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar7.jpg">
+                                                            <a href="" class="item-name primary-link">Sita Timalsina </a>
+                                                            <span class="item-label">12 hrs ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-danger"></span> Pending</span>
+                                                    </div>
+                                                    <div class="item-body"> Consectetuer adipiscing elit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar9.jpg">
+                                                            <a href="" class="item-name primary-link">Shyam Shrama</a>
+                                                            <span class="item-label">2 days ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-danger"></span> Open</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ut laoreet dolore magna aliquam erat volutpat. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar8.jpg">
+                                                            <a href="" class="item-name primary-link">Preety</a>
+                                                            <span class="item-label">3 days ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-warning"></span> Pending</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="item-head">
+                                                        <div class="item-details">
+                                                            <img class="item-pic rounded" src="assets/pages/media/users/avatar2.jpg">
+                                                            <a href="" class="item-name primary-link">Shila</a>
+                                                            <span class="item-label">4 hrs ago</span>
+                                                        </div>
+                                                        <span class="item-status">
+                                                            <span class="badge badge-empty badge-success"></span> Open</span>
+                                                    </div>
+                                                    <div class="item-body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> -->
+                    <div class="row">
+                        <div id="chartdiv">    
+                        </div>
+                        <!-- <div class="panel panel-default">
+                            <div class="panel-header text-center">
+                                    <h3><strong>Time</strong></h3>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+            
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2018 &copy; Malika Incorporate.
+                <a href="http://malikaincorporate.com/" title="Malika" target="_blank">Malika Incorporate</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        <!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/global/plugins/moment.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/horizontal-timeline/horozontal-timeline.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        
+        
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="assets/layouts/layout2/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>
+        
+        <!-- END THEME LAYOUT SCRIPTS -->
+
+        <!-- Bar chart script -->
+        <script src="assets/layouts/layout2/scripts/barchart.js" type="text/javascript"></script>
+        <!-- Bar chart script -->
+    </body>
+
+</html>

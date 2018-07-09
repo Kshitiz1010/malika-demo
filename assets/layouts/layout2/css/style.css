@@ -1,0 +1,46 @@
+.page-header.navbar .page-logo{
+    background: #ffffff;
+   
+}
+.page-header.navbar .page-logo .logo-default{
+    margin: 10px 0 0;
+}
+.malika-logo{
+    border-right: 1px solid black;
+}
+.exp-title{
+    padding: 0px 0px 10px 30px;
+    font-size: 22px;
+    color: #666;
+}
+.dash-icon{
+    color:#e34144 !important;
+}
+.badge-red{
+    background-color: #e34144 !important;
+}
+.dash-stat{
+    padding: 15px 15px 15px;
+}
+.dash-stat .display{
+
+    margin: 20px 20px 20px 20px;
+}
+.page-footer{
+    background: #e34144;
+}
+.page-footer-inner a {
+    color: black;
+}
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}
+
+@media (max-width: 768px) {
+    .mb-bg{
+        background: #e34144;
+    }
+  }
+  
